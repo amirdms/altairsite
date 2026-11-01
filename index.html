@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Altair — Agence digitale en Algérie | Sites web, agents IA, design</title>
+  <meta name="description" content="Altair crée des sites web, des agents IA et des identités de marque pour faire grandir votre entreprise sur internet. Agence digitale basée en Algérie.">
+  <meta name="theme-color" content="#0B0B12">
+  <meta name="color-scheme" content="dark">
+
+  <!-- Open Graph / partage -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Altair">
+  <meta property="og:title" content="Altair — Agence digitale en Algérie | Sites web, agents IA, design">
+  <meta property="og:description" content="Altair crée des sites web, des agents IA et des identités de marque pour faire grandir votre entreprise sur internet. Agence digitale basée en Algérie.">
+  <meta property="og:image" content="assets/og-square.png">
+  <meta property="og:image:width" content="1080">
+  <meta property="og:image:height" content="1080">
+  <meta property="og:image:alt" content="Étoile Altair, violette et blanche, sur fond sombre">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/og-square.png">
+
+  <!-- Police Sora (Google Fonts, auto-hébergée et allégée : latin + français, graisses 400 à 700) -->
+  <link rel="preload" href="assets/fonts/sora-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Active les animations d'intro seulement si l'utilisateur les accepte -->
+  <script>
+    (function (d) {
+      d.classList.add('js');
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) d.classList.add('motion');
+    })(document.documentElement);
+  </script>
+  <script src="assets/vendor/gsap.min.js" defer></script>
+  <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
+  <script src="assets/vendor/DrawSVGPlugin.min.js" defer></script>
+  <script src="assets/vendor/lenis.min.js" defer></script>
+  <script src="main.js" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Altair",
+    "description": "Agence digitale en Algérie : sites web, agents IA et design.",
+    "email": "altair_agency_dz@gmail.com",
+    "telephone": "+213776700620",
+    "areaServed": "DZ",
+    "address": { "@type": "PostalAddress", "addressCountry": "DZ" },
+    "sameAs": ["https://instagram.com/altair.agency.dz"]
+  }
+  </script>
+</head>
+<body>
+  <!-- Sprite d'icônes (réutilisées via <use>) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-star" viewBox="-60 -60 120 120">
+        <path d="M0,-55 C-7,-7 -7,-7 -55,0 C-7,7 -7,7 0,55 Z" fill="#7C3AED"/>
+        <path d="M0,-55 C7,-7 7,-7 55,0 C7,7 7,7 0,55 Z" fill="#FFFFFF"/>
+        <path d="M40,-50 L42,-42 L50,-40 L42,-38 L40,-30 L38,-38 L30,-40 L38,-42 Z" fill="#FFFFFF"/>
+      </symbol>
+      <symbol id="i-star-plain" viewBox="-60 -60 120 120">
+        <path d="M0,-55 C-7,-7 -7,-7 -55,0 C-7,7 -7,7 0,55 Z" fill="#7C3AED"/>
+        <path d="M0,-55 C7,-7 7,-7 55,0 C7,7 7,7 0,55 Z" fill="#FFFFFF"/>
+      </symbol>
+      <symbol id="i-arrow" viewBox="0 0 40 24">
+        <path d="M2 12 H36 M26 2 L36 12 L26 22" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24">
+        <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 6.5 L12 13 L20.5 6.5"/></g>
+      </symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 3.5 H9 L10.5 8 L8 9.5 C9 12 12 15 14.5 16 L16 13.5 L20.5 15 V19 C20.5 19.8 19.8 20.5 19 20.5 C10.4 20.5 3.5 13.6 3.5 5 C3.5 4.2 4.2 3.5 5 3.5 Z"/>
+      </symbol>
+      <symbol id="i-instagram" viewBox="0 0 24 24">
+        <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8"/></g>
+      </symbol>
+      <symbol id="i-whatsapp" viewBox="0 0 24 24">
+        <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2.5 21.5Z"/><path d="M9 9.5c0 2.8 2.7 5.5 5.5 5.5l1-1.6-1.9-.9-.8.8c-.9-.4-1.7-1.2-2.1-2.1l.8-.8-.9-1.9L9 9.5Z"/></g>
+      </symbol>
+      <symbol id="i-chevron" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 5 L16 12 L9 19"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <!-- ============ EN-TÊTE ============ -->
+  <header class="site-header" id="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="#accueil" data-scroll>
+        <svg class="brand__mark" aria-hidden="true" focusable="false"><use href="#i-star"/></svg>
+        <span class="brand__name">Altair</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a class="site-nav__link" href="#a-propos" data-scroll data-nav="a-propos">À propos</a>
+        <a class="site-nav__link" href="#services" data-scroll data-nav="services">Services</a>
+        <a class="btn btn--primary btn--sm" href="#contact" data-scroll data-magnetic>
+          <span class="btn__label">Démarrer un projet</span>
+        </a>
+      </nav>
+
+      <button class="icon-btn menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7 H20"/><path d="M4 12 H20"/><path d="M10 17 H20"/></svg>
+      </button>
+    </div>
+    <div class="scroll-progress" aria-hidden="true"></div>
+  </header>
+
+  <!-- ============ MENU MOBILE (plein écran) ============ -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+    <div class="mobile-menu__header">
+      <a class="brand" href="#accueil" data-scroll>
+        <svg class="brand__mark" aria-hidden="true" focusable="false"><use href="#i-star"/></svg>
+        <span class="brand__name">Altair</span>
+      </a>
+      <button class="icon-btn icon-btn--strong menu-close" type="button" aria-label="Fermer le menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6 L18 18"/><path d="M18 6 L6 18"/></svg>
+      </button>
+    </div>
+
+    <nav class="mobile-menu__nav" aria-label="Menu principal">
+      <a class="mobile-menu__link" href="#accueil" data-scroll><span>Accueil</span><svg aria-hidden="true" focusable="false"><use href="#i-chevron"/></svg></a>
+      <a class="mobile-menu__link" href="#a-propos" data-scroll><span>À propos</span><svg aria-hidden="true" focusable="false"><use href="#i-chevron"/></svg></a>
+      <a class="mobile-menu__link" href="#services" data-scroll><span>Services</span><svg aria-hidden="true" focusable="false"><use href="#i-chevron"/></svg></a>
+      <a class="mobile-menu__link" href="#contact" data-scroll><span>Contact</span><svg aria-hidden="true" focusable="false"><use href="#i-chevron"/></svg></a>
+    </nav>
+
+    <div class="mobile-menu__footer">
+      <a class="btn btn--primary btn--xl btn--block" href="#contact" data-scroll>
+        <span class="btn__label">Lancer votre projet</span>
+        <svg class="btn__arrow" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>
+      </a>
+      <div class="mobile-menu__social">
+        <a class="round-btn" href="tel:+213776700620" aria-label="Appeler Altair"><svg aria-hidden="true" focusable="false"><use href="#i-phone"/></svg></a>
+        <a class="round-btn" href="https://wa.me/213776700620?text=Bonjour%20Altair%2C%20j%E2%80%99aimerais%20parler%20de%20mon%20projet." target="_blank" rel="noopener noreferrer" aria-label="Écrire à Altair sur WhatsApp (nouvel onglet)"><svg aria-hidden="true" focusable="false"><use href="#i-whatsapp"/></svg></a>
+        <a class="round-btn" href="mailto:altair_agency_dz@gmail.com" aria-label="Envoyer un e-mail à Altair"><svg aria-hidden="true" focusable="false"><use href="#i-mail"/></svg></a>
+        <a class="round-btn" href="https://instagram.com/altair.agency.dz" target="_blank" rel="noopener noreferrer" aria-label="Altair sur Instagram (nouvel onglet)"><svg aria-hidden="true" focusable="false"><use href="#i-instagram"/></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main" tabindex="-1">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="accueil" aria-labelledby="hero-title" tabindex="-1">
+      <canvas class="hero__sky" aria-hidden="true"></canvas>
+
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="eyebrow hero__eyebrow">Agence digitale · Algérie</p>
+
+          <h1 class="hero__title" id="hero-title">
+            <span class="w"><span style="--i:0">Faites</span></span>
+            <span class="w"><span style="--i:1">briller</span></span><br>
+            <span class="w"><span style="--i:2">votre</span></span>
+            <span class="w"><span style="--i:3">entreprise.</span></span>
+          </h1>
+
+          <p class="hero__lead">Nous créons des sites web, des agents IA et des identités de marque qui font grandir votre entreprise sur internet.</p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary btn--lg" href="#contact" data-scroll data-magnetic>
+              <span class="btn__label">Lancer votre projet</span>
+              <svg class="btn__arrow" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>
+            </a>
+            <a class="btn btn--ghost btn--lg" href="#services" data-scroll>
+              <span class="btn__label">Voir nos services</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__art" aria-hidden="true">
+          <div class="hero__glow"></div>
+          <div class="hero__star-scroll">
+            <div class="hero__star-float">
+              <svg class="hero__star" viewBox="-70 -70 140 140" focusable="false">
+                <path class="hero__star-left" d="M0,-55 C-7,-7 -7,-7 -55,0 C-7,7 -7,7 0,55 Z" fill="#7C3AED"/>
+                <path class="hero__star-right" d="M0,-55 C7,-7 7,-7 55,0 C7,7 7,7 0,55 Z" fill="#FFFFFF"/>
+                <path class="hero__sparkle" d="M40,-50 L42,-42 L50,-40 L42,-38 L40,-30 L38,-38 L30,-40 L38,-42 Z" fill="#FFFFFF"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ À PROPOS ============ -->
+    <section class="section section--alt" id="a-propos" aria-labelledby="about-title" tabindex="-1">
+      <div class="container about">
+        <div class="about__head">
+          <p class="eyebrow" data-reveal="eyebrow">À propos</p>
+          <h2 class="section-title" id="about-title" data-split>Le nom d’une des étoiles les plus brillantes du ciel.</h2>
+        </div>
+
+        <div class="about__body" data-reveal="stack">
+          <p>Altair est une étoile qui brille fort dans le ciel. C’est ce que nous voulons pour chaque client&nbsp;: qu’il brille et se fasse remarquer.</p>
+          <p>Nous sommes une agence digitale basée en Algérie. Nous réunissons design, développement web et intelligence artificielle, pour que votre entreprise trouve tout ce dont elle a besoin en ligne, auprès d’une seule équipe.</p>
+        </div>
+
+        <ul class="about__cards" role="list" data-reveal="cards">
+          <li class="card about-card" data-glow>
+            <h3 class="about-card__title">Une équipe, tout en ligne</h3>
+            <p class="about-card__text">Site web, outils IA et identité de marque conçus ensemble, pour qu’ils fonctionnent ensemble.</p>
+          </li>
+          <li class="card about-card" data-glow>
+            <h3 class="about-card__title">Moderne par nature</h3>
+            <p class="about-card__text">Nous utilisons les outils et les standards de design actuels, pour que votre entreprise soit à la hauteur d’aujourd’hui.</p>
+          </li>
+          <li class="card about-card" data-glow>
+            <h3 class="about-card__title">Proche de vous</h3>
+            <p class="about-card__text">Une équipe locale en Algérie, qui parle votre langue et répond à vos messages.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="section section--services" id="services" aria-labelledby="services-title" tabindex="-1">
+      <div class="container services">
+        <div class="services__head">
+          <p class="eyebrow" data-reveal="eyebrow">Nos services</p>
+          <h2 class="section-title" id="services-title" data-split>Trois façons de vous faire grandir.</h2>
+        </div>
+
+        <ul class="services__grid" role="list" data-reveal="services">
+          <li class="services__item">
+            <article class="card service-card" data-glow data-tilt>
+              <div class="service-card__head">
+                <div class="icon-tile" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" focusable="false" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4" width="19" height="14" rx="2.5"/><path d="M2.5 8 H21.5"/><path d="M9.5 11.5 L7.5 13.5 L9.5 15.5"/><path d="M14.5 11.5 L16.5 13.5 L14.5 15.5"/><path d="M8 21 H16"/></svg>
+                </div>
+                <h3 class="service-card__title">Sites web</h3>
+              </div>
+              <p class="service-card__text">Des sites modernes et rapides, faits pour votre marque&nbsp;: landing pages, sites vitrines et boutiques en ligne, parfaits sur tous les écrans.</p>
+            </article>
+          </li>
+          <li class="services__item">
+            <article class="card service-card" data-glow data-tilt>
+              <div class="service-card__head">
+                <div class="icon-tile" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" focusable="false" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="12" rx="3"/><path d="M12 8 V4.5"/><circle cx="12" cy="3.5" r="1"/><circle cx="9" cy="14" r="1.2"/><circle cx="15" cy="14" r="1.2"/><path d="M2 13 V16"/><path d="M22 13 V16"/></svg>
+                </div>
+                <h3 class="service-card__title">Agents IA</h3>
+              </div>
+              <p class="service-card__text">Des assistants intelligents qui répondent à vos clients, gèrent les tâches répétitives et font gagner du temps à votre équipe.</p>
+            </article>
+          </li>
+          <li class="services__item">
+            <article class="card service-card" data-glow data-tilt>
+              <div class="service-card__head">
+                <div class="icon-tile" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" focusable="false" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 L19 10 L15 20 H9 L5 10 Z"/><circle cx="12" cy="11.5" r="1.8"/><path d="M12 3 V9.7"/><path d="M8 22 H16"/></svg>
+                </div>
+                <h3 class="service-card__title">Design</h3>
+              </div>
+              <p class="service-card__text">Logos, identité de marque et visuels pour les réseaux sociaux, pour une entreprise reconnaissable qui se démarque.</p>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section section--alt" id="contact" aria-labelledby="contact-title" tabindex="-1">
+      <div class="container contact">
+        <div class="contact__intro" data-reveal="stack">
+          <p class="eyebrow">Contactez-nous</p>
+          <h2 class="section-title" id="contact-title" data-split>Prêt à briller&nbsp;?</h2>
+          <p class="contact__lead">Parlez-nous de votre projet, nous vous recontacterons pour discuter des prochaines étapes.</p>
+
+          <!-- Ordinateur : coordonnées détaillées -->
+          <ul class="contact-list" role="list">
+            <li><a class="contact-list__link" href="mailto:altair_agency_dz@gmail.com"><svg aria-hidden="true" focusable="false"><use href="#i-mail"/></svg><span>altair_agency_dz@gmail.com</span></a></li>
+            <li><a class="contact-list__link" href="tel:+213776700620"><svg aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><span>0776700620</span></a></li>
+            <li><a class="contact-list__link" href="https://wa.me/213776700620?text=Bonjour%20Altair%2C%20j%E2%80%99aimerais%20parler%20de%20mon%20projet." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" focusable="false"><use href="#i-whatsapp"/></svg><span>WhatsApp : 0776700620</span></a></li>
+            <li><a class="contact-list__link" href="https://instagram.com/altair.agency.dz" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" focusable="false"><use href="#i-instagram"/></svg><span>@altair.agency.dz</span></a></li>
+          </ul>
+
+          <!-- Mobile : boutons rapides -->
+          <div class="contact-quick">
+            <a class="contact-quick__btn" href="tel:+213776700620"><svg aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>Appeler</a>
+            <a class="contact-quick__btn" href="https://wa.me/213776700620?text=Bonjour%20Altair%2C%20j%E2%80%99aimerais%20parler%20de%20mon%20projet." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" focusable="false"><use href="#i-whatsapp"/></svg>WhatsApp</a>
+            <a class="contact-quick__btn" href="mailto:altair_agency_dz@gmail.com"><svg aria-hidden="true" focusable="false"><use href="#i-mail"/></svg>E-mail</a>
+            <a class="contact-quick__btn" href="https://instagram.com/altair.agency.dz" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" focusable="false"><use href="#i-instagram"/></svg>Instagram</a>
+          </div>
+          <p class="contact-text">
+            <span>altair_agency_dz@gmail.com</span>
+            <span>0776700620 (appel et WhatsApp) · @altair.agency.dz</span>
+          </p>
+        </div>
+
+        <!--
+          Formulaire relié à Formspree (formulaire mzeejwkg) : les messages arrivent par e-mail
+          dans la boîte du compte Formspree. Envoi en AJAX par main.js ; sans JavaScript,
+          le formulaire est envoyé normalement à Formspree.
+        -->
+        <form class="card contact-form" id="contact-form" action="https://formspree.io/f/mzeejwkg" method="POST" data-reveal="form">
+          <input type="hidden" name="_subject" value="Nouveau message depuis le site Altair">
+          <div class="hp" aria-hidden="true">
+            <label for="f-website">Ne pas remplir</label>
+            <input id="f-website" type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label class="field__label" for="f-name">Votre nom</label>
+              <input class="field__control" id="f-name" name="name" type="text" autocomplete="name" required minlength="2" maxlength="80" aria-describedby="f-name-error">
+              <p class="field__error" id="f-name-error" hidden></p>
+            </div>
+            <div class="field">
+              <label class="field__label" for="f-email">E-mail</label>
+              <input class="field__control" id="f-email" name="email" type="email" inputmode="email" autocomplete="email" required maxlength="120" aria-describedby="f-email-error">
+              <p class="field__error" id="f-email-error" hidden></p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="f-service">De quoi avez-vous besoin&nbsp;?</label>
+            <select class="field__control field__control--select" id="f-service" name="service">
+              <option>Site web</option>
+              <option>Agent IA</option>
+              <option>Design</option>
+              <option>Je ne sais pas encore</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="f-message">Parlez-nous de votre projet</label>
+            <textarea class="field__control field__control--area" id="f-message" name="message" rows="4" required minlength="10" maxlength="3000" aria-describedby="f-message-error"></textarea>
+            <p class="field__error" id="f-message-error" hidden></p>
+          </div>
+
+          <div class="form-submit">
+            <button class="btn btn--primary btn--lg btn--block contact-form__submit" type="submit">
+              <span class="btn__spinner" aria-hidden="true"></span>
+              <span class="btn__label">Envoyer le message</span>
+            </button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+            <p class="form-alt">Vous préférez WhatsApp&nbsp;? <a href="https://wa.me/213776700620?text=Bonjour%20Altair%2C%20j%E2%80%99aimerais%20parler%20de%20mon%20projet." target="_blank" rel="noopener noreferrer">Écrivez-nous directement</a></p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ PIED DE PAGE ============ -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <a class="brand brand--footer" href="#accueil" data-scroll>
+        <svg class="brand__mark" aria-hidden="true" focusable="false"><use href="#i-star-plain"/></svg>
+        <span class="brand__name">Altair</span>
+      </a>
+      <p class="site-footer__copy">© 2026 Altair · Sites web · Agents IA · Design</p>
+    </div>
+  </footer>
+
+  <!-- Bouton WhatsApp flottant (apparaît après le hero, se cache sur la section contact) -->
+  <a class="wa-float" href="https://wa.me/213776700620?text=Bonjour%20Altair%2C%20j%E2%80%99aimerais%20parler%20de%20mon%20projet." target="_blank" rel="noopener noreferrer" aria-label="Écrire à Altair sur WhatsApp (nouvel onglet)">
+    <svg aria-hidden="true" focusable="false"><use href="#i-whatsapp"/></svg>
+    <span class="wa-float__label" aria-hidden="true">WhatsApp</span>
+  </a>
+</body>
+</html>
