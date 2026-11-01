@@ -9,17 +9,20 @@ index.html          la page
 styles.css          tous les styles (mobile d'abord)
 main.js             animations, menu mobile, formulaire
 vercel.json         réglages d'hébergement Vercel (cache, sécurité)
+favicon.ico         logo dans l'onglet du navigateur (tous navigateurs)
+site.webmanifest    nom « Altair » et logo quand on ajoute le site à l'écran d'accueil
 assets/
   fonts/            police Sora (allégée : latin + français, graisses 400 à 700) + licence OFL
   vendor/           GSAP, ScrollTrigger, DrawSVG (animations) et Lenis (défilement fluide)
   favicon.svg, logo-mark*.svg, og-square.png (image de partage, compressée : 45 Ko au lieu de 580 Ko)
+  apple-touch-icon.png, icon-192.png, icon-512.png (logo pour iPhone, Android et Google)
 ```
 
 ## Mettre le site en ligne avec Vercel (sans rien installer)
 
 1. Décompressez `altair-site.zip`.
 2. Sur https://github.com, connectez-vous puis **New repository** : nom `altair-site`, puis **Create repository**.
-3. Sur la page du dépôt, cliquez sur **uploading an existing file**. Ouvrez le dossier `altair` et glissez **son contenu** (`index.html`, `styles.css`, `main.js`, `vercel.json`, `README.md` et le dossier `assets`), puis **Commit changes**.
+3. Sur la page du dépôt, cliquez sur **uploading an existing file**. Ouvrez le dossier `altair` et glissez **son contenu** (`index.html`, `styles.css`, `main.js`, `vercel.json`, `favicon.ico`, `site.webmanifest`, `README.md` et le dossier `assets`), puis **Commit changes**.
 4. Sur https://vercel.com, **Continue with GitHub**, puis **Add New… → Project** et **Import** à côté de `altair-site`.
 5. Laissez les réglages par défaut (Framework Preset : *Other*, aucune commande de build) et cliquez sur **Deploy**.
 6. Au bout d'environ 30 secondes, le site est en ligne à une adresse du type `https://altair-site.vercel.app`.
